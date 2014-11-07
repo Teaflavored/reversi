@@ -200,37 +200,37 @@ describe("Board", function () {
       assert.equal(testBoard.validMove([3, 4], 'black'), false);
     });
 
-    // it('should return false for a move that does not capture', function() {
-//       assert.equal(testBoard.validMove([2, 3], "white"), false);
-//     });
-//
-//     it('should return true for a valid move', function() {
-//       assert.equal(testBoard.validMove([2, 3], "black"), true);
-//     });
+    it('should return false for a move that does not capture', function() {
+      assert.equal(testBoard.validMove([2, 3], "white"), false);
+    });
+
+    it('should return true for a valid move', function() {
+      assert.equal(testBoard.validMove([2, 3], "black"), true);
+    });
   });
 
   describe('#validMoves', function () {
-    // it('should return an empty array when there are no valid moves', function() {
-//       fillBoard(testBoard);
-//       assert.equal(testBoard.validMoves('black').length, 0);
-//     });
-//
-//     it('should return an array of valid moves when some are left', function() {
-//       var validPositions = [
-//         [2, 3],
-//         [3, 2],
-//         [4, 5],
-//         [5, 4]
-//       ];
-//       var actualPositions = testBoard.validMoves('black');
-//
-//       assert.equal(actualPositions.length, validPositions.length);
-//
-//       actualPositions.forEach(function(actualPosition, index) {
-//         var validPosition = validPositions[index];
-//         assert.equal(actualPosition[0], validPosition[0]);
-//         assert.equal(actualPosition[1], validPosition[1]);
-//       });
-//     });
+    it('should return an empty array when there are no valid moves', function() {
+      fillBoard(testBoard);
+      assert.equal(testBoard.validMoves('black').length, 0);
+    });
+
+    it('should return an array of valid moves when some are left', function() {
+      var validPositions = [
+        [2, 3],
+        [3, 2],
+        [4, 5],
+        [5, 4]
+      ];
+      var actualPositions = testBoard.validMoves('black');
+
+      assert.equal(actualPositions.length, validPositions.length);
+
+      actualPositions.forEach(function(actualPosition, index) {
+        var validPosition = validPositions[index];
+        assert.equal(actualPosition[0], validPosition[0]);
+        assert.equal(actualPosition[1], validPosition[1]);
+      });
+    });
   });
 });
